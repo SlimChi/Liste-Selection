@@ -11,19 +11,19 @@ import java.util.ArrayList;
 public class ListController<T> extends BorderPane {
 
     @FXML
-    private ListView<T> itemSelected;
+    private ListView<T> listeGauche;
 
     @FXML
-    private ListView<T> itemsView;
+    private ListView<T> listeDroite;
 
-    private Lists allItems;
+    private Lists tousLesItems;
 
     public ListController() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("liste.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
-        allItems = new Lists();
+        tousLesItems = new Lists();
 
         try {
             fxmlLoader.load();
@@ -38,8 +38,8 @@ public class ListController<T> extends BorderPane {
 
     }
     public void setParamettreListe(ArrayList<T> items){
-        allItems.setAllItems(items);
-        itemsView.setItems(allItems.getAllItems());
+        tousLesItems.setAllItems(items);
+        listeGauche.setItems(tousLesItems.getAllItems());
 
     }
 

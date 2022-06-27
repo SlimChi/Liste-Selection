@@ -13,12 +13,12 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         Personne personne1 = new Personne( "nom1");
-      Personne personne2 = new Personne("nom2");
+
 
 
         ArrayList<Personne> personnes = new ArrayList<Personne>();
         personnes.add(personne1);
-        personnes.add(personne2);
+
 
         ListController controller = new ListController();
         controller.setParamettreListe(personnes);

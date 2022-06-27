@@ -8,24 +8,24 @@ import java.util.ArrayList;
 
     public class Lists<T>{
 
-        public ObservableList<T> allItems;
-        private FilteredList<T> filteredItems;
+        public ObservableList<T> tousLesItems;
+        private FilteredList<T> itemsFiltrer;
 
         public Lists(){
-            allItems = FXCollections.observableArrayList();
-            filteredItems = new FilteredList<>(allItems,critere -> true);
+            tousLesItems = FXCollections.observableArrayList();
+            itemsFiltrer = new FilteredList<>(tousLesItems,critere -> true);
         }
 
         public ObservableList<T> getAllItems() {
-            return allItems;
+            return tousLesItems;
         }
 
         public FilteredList<T> getFilteredItems() {
-            return filteredItems;
+            return itemsFiltrer;
         }
 
         public void setAllItems(ArrayList<T> items) {
-            allItems = FXCollections.observableArrayList(items);
+            tousLesItems = FXCollections.observableArrayList(items);
 
         }
     }
