@@ -24,6 +24,7 @@ public class Main extends Application {
         controller.setParamettreListe(personnes);
         Scene scene = new Scene(controller);
          stage.setScene(scene);
+         stage.setTitle("Drag & Drop");
         stage.show();
     }
 
